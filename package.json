@@ -4,7 +4,7 @@
   "description": "http mock server",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,9 @@
   "homepage": "https://github.com/defghy/mock-server#readme",
   "dependencies": {
     "colors": "^1.3.3",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "http-proxy": "^1.17.0",
+    "request": "^2.88.0",
+    "zlib": "^1.0.5"
   }
 }
