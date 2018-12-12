@@ -4,26 +4,18 @@ var fs = require('fs');
 var _url = require('url');
 var Express =  require('express');
 
-const ORIGIN = 'https://online.yunshanmeicai.com';
+const ORIGIN = 'https://treasure-box.test.yunshanmeicai.com';
 var serverConfig = {
   PORT: 7777,
   ORIGIN,
   MOCK: true,
-  HOT_REPLACE: false,
-  WEIXIN_JSSDK_DEBUG: false,
   REDIRECT_RULES: {
     html: {
       "/$": `${ORIGIN}/entry/index`,
-      "/entry/index(.*)": `${ORIGIN}/entry/index`,
-      '/preview/index(.*)': `${ORIGIN}/preview/index`,
-      '/mapp/(\.+)': `${ORIGIN}/mapp/$1`,
-      '/store/(.*)': `${ORIGIN}/entry/index`,
-      '/page/(.*)': `${ORIGIN}/entry/index`
+      "/entry/index(.*)": `${ORIGIN}/entry/index`
     },
     api: {
-      "/mall_trade/api/(.*)$": `${ORIGIN}/mall_trade/api/$1`,
-      "/mall/api/(.*)$": `${ORIGIN}/mall/api/$1`,
-      "/fi_invoice/api/(.*)$": `${ORIGIN}/fi_invoice/api/$1`
+      "/app/(.*)$": `${ORIGIN}/app/$1`
     }
   }
 };
