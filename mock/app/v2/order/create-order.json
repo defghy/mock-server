@@ -1,6 +1,6 @@
 {
     "ret":10001,
-    "data": {
+    "error": {
         "sku_ids": [
             1,
             2
